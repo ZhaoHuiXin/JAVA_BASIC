@@ -34,7 +34,7 @@ class Single{
 				// 如果a到这挂了，此时有个b执行，b成功创建实例后，a又活了，
 				//会再进行一次判断，此时s已经不是null，a就不会重复创建实例了
 				if(s==null){
-						s = new Single();
+					s = new Single();
 				}
 			}
 		}
