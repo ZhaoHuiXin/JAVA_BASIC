@@ -13,6 +13,7 @@ class AbstractDemo2{
 		s.work();
 		Manager m = new Manager(100000,"jack", "002", 50000);
 		m.work();
+		System.out.println(m.getBonus());
 	}
 }
 
@@ -49,4 +50,11 @@ class Manager extends Base{
 	public void work(){
 		System.out.println("manager work");
 	}
+
+	public int getBonus(){
+		return this.bonus;
+	}
 }
+
+
+

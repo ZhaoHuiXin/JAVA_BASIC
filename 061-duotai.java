@@ -44,7 +44,7 @@ class DuoTaiDemo2{
 		// doSome(new AdvStudent());
 		DoStudent.doSome(new BaseStudent());
 		DoStudent.doSome(new AdvStudent());
-		// 多态将对象调用变简单了。
+		// 多态 将对象调用变简单了。
 	}
 
 	/*
