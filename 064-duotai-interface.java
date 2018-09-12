@@ -1,4 +1,10 @@
-
+/*
+	需求：模拟数据库操作
+	数据是：用户信息
+	1.连接数据库
+	2.操作数据库
+	3.关闭数据库
+*/
 class User{
 	String name;
 	User(String name){
@@ -44,3 +50,7 @@ class DuoTaiInterface2{
 		udbo.run(new Balabala(),u);
 	}
 }
+
+
+
+

@@ -1,0 +1,96 @@
+/*
+	内部类的访问规则：
+	互相访问方式
+		1.内部类可以直接访问外部类中的成员，包括私有（private）
+			之所以可以直接访问外部类中的成员，是因为内部类中默认隐式的持有了一个外部类的引用，格式：外部类名.this
+		2.外部类要访问内部类，必须建立内部类对象
+
+	内部类特点：
+		1.能被 private 修饰,内部类可以被私有修饰，当内部类在外部类的成员位置上时；外部类绝对不能哦
+
+	访问格式：
+		1.当内部定义在外部类的成员位置上，并且 ”非私有“，可以在外部其他类中(比如ClassNest就是外部其他类)，
+	直接建立内部类对象，格式： 外部类名.内部类名  变量名 = 外部类对象.内部类对象
+									Outer.Inner in = new Outer().new Inner();
+		2.当内部类在成员位置上，就可以被成员修饰符所修饰，
+	比如 private：将内部类在外部类中进行封装
+		static：内部类可以被静态修饰，内部类就具备了静态的特性,当内部类被静态修饰后，只能直接访问外部类中的静态成员，
+	出现了访问局限性。
+		3.在外部其他类中如何直接访问静态内部类的非静态成员呢？
+		new Outer.Inner().function();
+		4.在其他类中，如何直接访问static内部类的静态成员呢？
+
+	注意：
+		1.当内部类中定义了静态成员，那么内部类必须静态的（static）
+		2.当外部类中的静态方法访问内部类时，内部类必须也是静态的
+*/
+
+
+
+class Outer{
+	// int x = 3;
+	private int x = 3;
+
+	void method(){
+		// System.out.println(x);
+		Inner in = new Inner();
+		in.function();
+	}
+
+
+
+
+	// 内部类,一个类放入另一个类中；注意不是类放到函数中
+	// private class Inner{ // 内部类
+	static class Inner{ // 静态内部类
+		int x = 4;
+		// 如果Inner想访问Outer中的method和Outer中的变量x，方便了许多，不用创建Outer的外部对象
+		static void function(){
+			int x = 6;
+			// 即使x是private的，Inner中也能访问到，因为Inner在Outer类中
+			System.out.println("inner : " +  x); // 6
+			// System.out.println("inner : " +  this.x); // 4
+			// System.out.println("inner:" + Outer.this.x); // 3 
+			// 外部类成员变量都被外部类对象访问，所以内部类想访问外部类成员变量时，必须有外部类的引用）
+		}
+	}
+
+	static class Inner2{
+		void show(){
+			System.out.println("inner2 show: ")
+		}
+	}
+
+	public static void method(){
+			Inner.function();
+	}
+}
+
+class ClassNest{
+	public static void main(String[] args){
+		Outer out = new Outer();
+		out.method();
+		out.
+
+		
+		// 创建内部类的实例： 外部类.内部类
+		// Outer.Inner in = new Outer().new Inner();
+		// in.function();
+
+		// 3.在外部其他类中如何直接访问静态内部类中静态呢呢？
+		// 直接访问内部类中的成员：
+		new Outer.Inner().function();
+
+		Outer.method();
+	}
+}
+
+
+
+
+
+
+
+
+
+

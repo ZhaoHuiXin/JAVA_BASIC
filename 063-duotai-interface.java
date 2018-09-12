@@ -1,4 +1,8 @@
-
+/*
+	需求：
+	电脑运行实例
+	电脑运行基于主板
+*/
 interface PCI{
 	public abstract void pciOpen();
 	public abstract void pciClose();
