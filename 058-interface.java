@@ -12,7 +12,7 @@
 	它需要被子类实现，子类对接口中的 “抽象方法” “全部” 覆盖后，子类才可以实例化。
 	否则子类是一个抽象类。
 
-	接口可以被类多实现，也是对多继承不支持的转换形式。java支持多实现
+	接口可以被类 多实现，也是对多继承不支持的转换形式。java支持 多实现
 	,不可以多继承，但是可以多实现，是因为接口中的方法都没有方法体
 	，即使多个接口都有同名方法，子类只实现一个就是都实现了
 
@@ -71,7 +71,7 @@ interface B extends A{
 interface C extends B{
 	void methodC();
 }
-// 接口之间可以多继承，如果B没有继承自A的话，C可以直接继承自A跟B。前提是A和B同名方法返回值类型是相同的
+// 接口之间可以多继承，如果B没有继承自A的话，C可以直接继承自A跟B。前提是A和B 同名方法返回值类型是相同的
 // 因为没有方法体，不会冲突
 // interface C extends B, A{
 // 	void methodC(){};
@@ -79,7 +79,8 @@ interface C extends B{
 
 
 class D implements C{
-	public void methodA(){  // 接口中是隐式的 public static void methodA()，所以实现的时候要显示的写出
+	// 接口中是隐式的 public static void methodA()，所以实现的时候要显示的写出
+	public void methodA(){  
 	System.out.println("hello method A");
 	}
 	public void methodB(){};

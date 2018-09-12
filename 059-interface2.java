@@ -8,7 +8,7 @@
 */
 
 interface BadHobby{
-	public static void smoke();
+	public abstract void smoke();
 }
 
 abstract class Student{
@@ -18,22 +18,28 @@ abstract class Student{
 	}
 }
 
-// 在学生意外的，体系意外的 "功能扩展"，即继承了学生的功能，又实现了附加的坏习惯
+// 在学生以外的，体系以外的 "功能扩展"，即继承了学生的功能，又实现了附加的坏习惯
 // 继承 是 is a； 接口是 like a
 class ZhangSan extends Student implements BadHobby{
-	void study(){}
-	public void smoke(){}
+	void study(){
+		System.out.println("张三继承并实现 Student 的抽象方法 study");
+	}
+	public void smoke(){
+		System.out.println("张三实现了接口 BadHobby 的方法smoke");
+	}
 }
 
-class Lisi extends Student{
+abstract class Lisi extends Student{
 
 }
 
 
 
-class {
+class InterfacePracticeDemo{
 	public static void main(String[] args){
-
+		ZhangSan zs = new ZhangSan();
+		zs.study();
+		zs.smoke();
 	}
 }
 
@@ -44,10 +50,10 @@ abstract class Sporter{
 }
 
 interface StudyJava{
-	public static void study();
+	public abstract void study();
 }
 
-class WangWu extends Sporter implements StudyJava{
+abstract class WangWu extends Sporter implements StudyJava{
 
 }
 
