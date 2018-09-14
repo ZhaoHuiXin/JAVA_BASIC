@@ -54,7 +54,8 @@ class FunctionReload
 	void show(int a, double c, char b) 重载：因为参数类型不同
 	boolean show(int c, char b){} 重载了，因为参数个数不同
 	void show(double c){} 重载，参数个butong
-	double show(int x, char y, double z){} 没有重载，这个函数不可以和给定函数同时存在于一个类中(重载和返回值类型无关) 
+	double show(int x, char y, double z){} 没有重载。(重载和返回值类型无关) 
+而且这个函数不可以和给定函数同时存在于一个类中，因为同一函数有两种类型的返回值
 
 	*/
 }
