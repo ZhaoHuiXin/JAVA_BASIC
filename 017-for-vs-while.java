@@ -26,4 +26,4 @@ class ForWhile
      System.out.println("y====="+y);
   }
 }
-// 如果变量只为循环增量存在，那么用for更好，省内存
+// 如果变量只为循环增量存在，那么用for更好，省内存，y占用内存，不会随着while结束而消失

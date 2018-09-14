@@ -26,7 +26,8 @@ class Single{
 	}
 	private Single(){};	 
 
-	// 静态方法只能访问静态变量，所以要使用static，再加private哦，隐藏起来；
+	// 静态方法只能访问静态变量，所以要使用static，再加private哦，隐藏起来； ➕不➕final都可
+	// private static final Single s = new Single();
 	private static Single s = new Single();
 
 	// 不能实例化，但是想要方法被访问，要使用静态；

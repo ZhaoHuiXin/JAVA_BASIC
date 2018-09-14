@@ -14,7 +14,7 @@ class ForNest
     int c = 5;
     for (int a=0; a<5; a++)
     {
-      for (int b=0; b<c; b++)
+      for (int b=0; b<a; b++)
       {
         System.out.print("x");
       }

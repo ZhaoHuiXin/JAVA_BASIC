@@ -5,7 +5,7 @@ class SwitchSeason
     int x = 12;
     switch (x)
     {
-      case 3:
+      case 3: // 与if不同，if是对结果的对错进行判断，case是对值进行判断，所以不能使用&& ||等运算符
       case 4:
       case 5:
               System.out.println("春季");

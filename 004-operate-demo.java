@@ -6,7 +6,7 @@ class OperateDemo
 
 		x = x/1000 * 1000;
 		System.out.println(x); 
-		// 4000,因为x是int型，1000也是int型，x/1000 结果是int型
+		// 结果是4000,因为x是int型，1000也是int型，x/1000 结果是int型
 		System.out.println(-1%5);      // 正负号只和左边有关
 		System.out.println(1%-5);
 

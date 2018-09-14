@@ -3,15 +3,15 @@ class VarDemo
 	public static void main(String[] args)
 	{	
 		/*  
-			byte 1两
-			short 2两
-			int  4两
-			long 8两
+			byte 1两 	8bit
+			short 2两   16bit
+			int  4两 	32bit
+			long 8两		64bit
 
-			float 4两
-			double 8两
+			float 4两	32bit
+			double 8两	64bit
 			
-			char 2两
+			char 2两		16bit
 		*/
 		//定义变量的格式：
 		// 数据类型	变量名 = 初始化值
