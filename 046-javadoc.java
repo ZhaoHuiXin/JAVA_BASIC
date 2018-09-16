@@ -7,7 +7,7 @@ javadoc -d myhelp -author -version xxx.java
 */
 // 凡是被public修饰符的功能都可以被文档注释描述，因为它们都可以被文档注释工具所提取
 // 想给一个类生成帮助文档，这个类必须是被public修饰的
-/*
+/* javadoc 。。。
 正在加载源文件046-javadoc.java...
 正在构造 Javadoc 信息...
 046-javadoc.java:11: 错误: 类 ArrayTool 是公共的, 应在名为 ArrayTool.java 的文件中声明

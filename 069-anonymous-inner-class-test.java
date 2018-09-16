@@ -68,7 +68,7 @@ class InnerTest{
 			public void function(){
 
 			}
-		}
+		};
 	}
 }
 

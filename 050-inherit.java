@@ -5,7 +5,7 @@
 		1.提高了代码的复用性
 		2.继承让类与类之间产生了关系。有了这个关系，才有了多态的特性。
 
-	注意：千万不要获取其他类的功能，简化代码而继承；必须是类与类之间有所属关系(is a)才可以继承
+	注意：千万不要为了获取其他类的功能，简化代码而继承；必须是类与类之间有所属关系(is a)才可以继承
 
 
 	Java语言中：java只支持单继承，不支持多继承（同时继承）。
@@ -21,7 +21,7 @@
 			一是因为有可能父类不能创建对象
 			二是创建子类对象可以使用更多的功能，包括父类的也包括子类特有的
 
-	简单一句话：查阅父类功能，创建子类对象使用功能。
+	简单一句话：查阅父类功能，创建子类对象（使用功能）。
 
 
 	聚集关系：has a  球队和球员
@@ -32,7 +32,7 @@
 
 
 // class Student{
-// 	private String name;
+// 	private String name;  // private不会被继承
 // 	private int age;
 // 	void study(){
 // 		System.out.println("good study");
@@ -48,11 +48,20 @@
 // }
 
 class Person{
-	private String name;
-	private int age;
+	String name;
+	private int age; // 私有不会被继承
 }
 
 class Student extends Person{
+
+	void setName(String name){
+		this.name = name;
+	}
+
+	String getName(){
+		return this.name;
+	}
+
 	void study(){
 		System.out.println("good study");
 	}
@@ -66,7 +75,11 @@ class Worker extends Person{
 
 class ExtendsDemo{
 	public static void main(String[] args){
-		System.out.println("hello world");
+		Student st = new Student();
+		MyUtil.println(st.getName());
+		st.setName("apple");
+		MyUtil.println(st.getName());
+
 	}
 }
 

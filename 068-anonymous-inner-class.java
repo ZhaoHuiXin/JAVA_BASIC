@@ -28,7 +28,8 @@ class Outer
 	*/
 
 	// 匿名的
-	public void function(){
+	public static void function(){
+		int x = 2;
 		new AbsDemo(){ // 加分号是实例化，这样写是匿名实现show()，并实例化
 			void show(){
 				System.out.println("show: " + x);
@@ -47,15 +48,17 @@ class Outer
 			void abc(){
 				System.out.println("hello world");
 			}
-		}
+		};
 		d.show(); // 可以
-		d.abc(); // 子类特有，不行
+		// d.abc(); // 子类特有，不行
 	}
 
 }
 
 class InnerClassDemo4{
 	public static void main(String[] args){
-		new Outer().function();
+		// new Outer().function();
+		Outer.function();
+
 	}
 }

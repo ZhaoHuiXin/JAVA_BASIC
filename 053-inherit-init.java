@@ -23,13 +23,22 @@
 class InheritConstuctor
 {
 	public static void main(String[] args){
-		Zi z = new Zi();
+		Zi z1 = new Zi();
+		Zi z2 = new Zi(3);
+		Student s = new Student("lili"); 
+		s.method();
+
+		s.show();
 	}
 }
 
 class Fu{
 	Fu(){
 		System.out.println("fu init");
+	}
+
+	Fu(int num){
+		MyUtil.println("fu init DIY,num = " + num);
 	}
 }
 
@@ -41,7 +50,7 @@ class Zi extends Fu{
 	}
 
 	Zi(int x){
-		// super();
+		super(x);
 		System.out.println("zi..." + x);
 	}
 }
@@ -51,15 +60,21 @@ class Person{
 	Person(String name){
 		this.name = name;
 	}
+	void show(){
+		MyUtil.println(this.name);
+	}
 }
 
 class Student extends Person{
+	private String name;
 	Student(String name){
 		// 调用父类含参数的构造函数
 		super(name);
+		this.name = name + " Student";
 	}
 
 	void method(){
 		super.show();
+		MyUtil.println(name);
 	}
 }

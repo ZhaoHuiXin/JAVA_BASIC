@@ -7,7 +7,7 @@
 			|--Exception
 				|--RuntimeException
 	异常体系的特点：异常体系中的所有类及建立的对象都具有可抛性。
-				  也就是说可以被throw 和 throws 关键字所操作
+				  也就是说可以被 throw 和 throws 关键字所操作
 				  只有异常体系具备这个特点。
 	——————————————————————————————————————
 	throw 和 throws 的用法：
