@@ -29,19 +29,12 @@ class ZhangSan extends Student implements BadHobby{
 	}
 }
 
-abstract class Lisi extends Student{
-
-}
-
-
-
-class InterfacePracticeDemo{
-	public static void main(String[] args){
-		ZhangSan zs = new ZhangSan();
-		zs.study();
-		zs.smoke();
+class Lisi extends Student{
+	void study(){
+		MyUtil.println("LiSi study but LiSi don't smoke");
 	}
 }
+
 
 // 玩什么不确定，确定的是学java肯定不是play中的内容
 abstract class Sporter{
@@ -53,8 +46,32 @@ interface StudyJava{
 	public abstract void study();
 }
 
-abstract class WangWu extends Sporter implements StudyJava{
+class WangWu extends Sporter implements StudyJava{
+	void play(){
+		MyUtil.println("Wang Wu play with butterfly");
+	}
 
+	public void study(){
+		MyUtil.println("wang wu study very hardly");
+	}
+}
+
+
+class InterfacePracticeDemo{
+	public static void main(String[] args){
+		ZhangSan zs = new ZhangSan();
+		zs.study();
+		zs.smoke();
+
+		Lisi ls = new Lisi();
+		ls.sleep();
+		ls.study();
+
+		WangWu ww = new WangWu();
+		ww.play();
+		ww.study();
+
+	}
 }
 
 
