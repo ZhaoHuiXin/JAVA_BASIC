@@ -28,22 +28,22 @@ class ExceptionDemo3{
 			int x = d.div(5,0);
 			System.out.println("x="+x);
 		} 
-		// catch (ArithmeticException e)
-		// {
-		// 	System.out.println(e.toString());
-		// 	System.out.println("被0除了！");
-		// }
-		// catch (ArrayIndexOutOfBoundsException e)
-		// {
-		// 	System.out.println(e.toString());
-		// 	System.out.println("角标越界了！");
-		// }
+		catch (ArithmeticException e)
+		{
+			System.out.println(e.toString());
+			System.out.println("被0除了！");
+		}
+		catch (ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.toString());
+			System.out.println("角标越界了！");
+		}
 
 		// 只写一个catch， 多态性，什么异常都能处理；但是没有针对性，最好写针对性处理
-		catch (Exception e)
-		{
-			System.out.println(e.toString()); 
-		}
+		// catch (Exception e)
+		// {
+		// 	System.out.println(e.toString()); 
+		// }
 
 		System.out.println("over");
 	}

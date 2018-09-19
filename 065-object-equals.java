@@ -23,9 +23,9 @@ class Demo{  // extends Object
 	}
 
 	// 覆盖Object的toString方法，个性化
-	public String toString(){
-		return "demo:" + this.num;
-	}
+	// public String toString(){
+	// 	return "demo:" + this.num;
+	// }
 }
 
 class ObjectDemo{
@@ -34,16 +34,18 @@ class ObjectDemo{
 		System.out.println(a.toString());
 		Demo b = new Demo(4);
 		System.out.println(b.toString());
-		System.out.println(a.equals(b));
 
-		System.out.println(Integer.toHexString(a.hashCode())); // 获得对象的哈希值（内存地址）并转为16进制
-		System.out.println(a.toString());
+		System.out.println(a.equals(b));
 		System.out.println(a.getClass());
 
 		Class c = a.getClass();
 		System.out.println(c.getName());
 		System.out.println(c.getMethods());
-		// toString 的实现
+
+		System.out.println(Integer.toHexString(a.hashCode())); // 获得对象的哈希值（内存地址）并转为16进制
+		System.out.println(a.toString()); // 默认的
+		// Object 默认的 toString 的实现
 		System.out.println(c.getName() + "@@" + Integer.toHexString(a.hashCode()));
+		
 	}
 }
