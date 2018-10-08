@@ -29,7 +29,7 @@ class OperateDemo
 		// 转义字符 通过 \ 符号转变后面字母或符号的含义
 		// \b退格，\r按下回车键，\n换行，\t制表符
 		// linux系统中换行用一个字符表示\n;
-		// 在windows中，换行是\r\n;DOS中直接能识别\n
+		// 在windows中，换行是\r\n; DOS中直接能识别\n
 		// println  ln会在结尾换行一次
 		System.out.print("hello world \n");
 		System.out.println("hello java"); 

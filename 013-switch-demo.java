@@ -3,7 +3,7 @@ class SwitchDemo
   public static void main(String[] args)
   {
     int x = 4;
-    switch(x) // 只接受4中类型byte，short，int，char
+    switch(x) // 只接受4种类型byte，short，int，char
     {          // case 和default定义位置是随意的，都会先读case
       default:
             System.out.println("not 4 not 6,it is "+x);

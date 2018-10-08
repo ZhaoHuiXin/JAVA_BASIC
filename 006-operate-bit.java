@@ -3,8 +3,10 @@ class OperateBit
 	public static void main(String[] args)
 	{
 		// 3<<2    0011-->1100
-		System.out.println(3<<2);  // = 3*2²
+		System.out.println(3<<3);  // = 3*2³
 		System.out.println(12>>2); // = 12/2²
+		System.out.println(-12>>2); // = 12/2²
+		System.out.println(-12>>>2); // = 12/2²
 		// 规律左移： n*2^位移  右移： n/2^位移
 		// 最快的运算时位运算，局限性是以2为基数增长
 

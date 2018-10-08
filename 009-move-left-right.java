@@ -4,7 +4,7 @@ class MoveLR
   {
     System.out.println(Integer.toBinaryString(60));
 
-    int num = 60;
+    int num = 60;  //  0011 1100
     
     // 获取60最低4位，通过&15;
     num & 15 =12;

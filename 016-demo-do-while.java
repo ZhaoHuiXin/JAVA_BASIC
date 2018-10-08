@@ -6,7 +6,6 @@ class DoWhileDemo
     do
     {
       System.out.println("do,while,x= "+x);
-      x ++;
     }
     while (x<0);
     
