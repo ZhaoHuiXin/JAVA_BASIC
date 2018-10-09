@@ -39,7 +39,7 @@ class Oop2
 	{
 		c.num = 3;
 		c.color = "black";
-		c.run;
+		c.run();
 	}
 
 	public static void main(String[] args)

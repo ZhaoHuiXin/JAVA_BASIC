@@ -58,8 +58,8 @@ class This{
 		// p.speak();
 		// Person p1 = new Person("蓝十字");
 		// p1.speak();
-		Person p1 = new Person(20);
-		Person p2 = new Person(25);
+		Person p1 = new Person("lucy");
+		Person p2 = new Person("lili");
 		System.out.println(p1.compare(p2));
 	}
 }

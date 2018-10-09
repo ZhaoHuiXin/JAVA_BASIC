@@ -79,6 +79,7 @@ class ExtendsDemo{
 		MyUtil.println(st.getName());
 		st.setName("apple");
 		MyUtil.println(st.getName());
+		MyUtil.println(st.name);
 
 	}
 }

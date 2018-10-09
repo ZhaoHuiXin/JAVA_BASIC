@@ -38,7 +38,11 @@ class Person{
 			而构造函数是给对应的对象进行初始化(不同的对象分别进行初始)
     */
 	{// 这里就是构造代码块，它先于构造函数执行
-		System.out.println("person code run")
+		System.out.println("person code run");
+		cry();
+	}
+	{// 这里就是构造代码块，它先于构造函数执行,可以有多个构造代码块，都是按顺序执行的
+		System.out.println("person code run");
 		cry();
 	}
 

@@ -36,5 +36,5 @@ class StaticCodeDemo{
 }
 /*
 预期结果： b,c,a,halo,over
-实际结果： b,c,a,haol,over
+实际结果： b,c,a,halo,over
 */

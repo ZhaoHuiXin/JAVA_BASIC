@@ -26,9 +26,9 @@ class InheritConstuctor
 		Zi z1 = new Zi();
 		Zi z2 = new Zi(3);
 		Student s = new Student("lili"); 
-		s.method();
+		s.method(); // 主动调用
 
-		s.show();
+		s.show(); //没有向上找
 	}
 }
 
@@ -61,7 +61,7 @@ class Person{
 		this.name = name;
 	}
 	void show(){
-		MyUtil.println(this.name);
+		MyUtil.println("Person class " + this.name);
 	}
 }
 

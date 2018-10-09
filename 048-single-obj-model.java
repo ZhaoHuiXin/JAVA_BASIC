@@ -27,6 +27,7 @@ class Single{
 	private Single(){};	 
 
 	// 静态方法只能访问静态变量，所以要使用static，再加private哦，隐藏起来； ➕不➕final都可
+	// 随类的加载而创建一个本类实例，只创建一次
 	// private static final Single s = new Single();
 	private static Single s = new Single();
 

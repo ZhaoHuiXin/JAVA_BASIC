@@ -99,7 +99,7 @@ class ArrayTool{
 
 	// 交换index功能
 	// 小细节，它是工具类内部调用的，没必要提供出去，将不需要暴露出去的都隐藏起来，将其私有化
-	// 但是static还是要的，因为本工具类已经被禁止实例化了，
+	// 但是static还是要的，因为本工具类已经被禁止实例化调用了(private)，
 	// 所有的方法都是静态的，静态内容只能调用静态内容
 	// public static void swap(int[] arr, int a, int b){
 	private static void swap(int[] arr, int a, int b){
