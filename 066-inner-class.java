@@ -21,7 +21,7 @@
 					static：内部类可以被静态修饰，内部类就具备了静态的特性,当内部类被静态修饰后，只能直接访问"外部类"中的"静态成员"，
 				出现了访问局限性。
 			3.在外部其他类中如何直接访问"静态内部类的非静态成员"呢？
-					new Outer.Inner().function();  Outer一加载静态内部类Inner就加载了，所以不用对象，使用Inner类名直接调用；
+					new Outer.Inner().function();  Outer一加载静态内部类Inner就加载了，所以不用对象，使用Outer类名直接调用；
 				但是function是非静态的，就得使用new创建一个内部类的对象再调用function方法；
 			4.在其他类中，如何直接访问static内部类的静态成员呢？
 				如果function也是静态的， Outer.Inner.function();不用new一个内部类对象。
@@ -53,7 +53,7 @@ class Outer{
 
 	void method(){
 		// System.out.println(x);
-		Inner in = new Inner();
+		Outer.Inner in = new Outer.Inner();
 		in.function();
 
 		Outer.Inner2 oi = new Outer.Inner2();
@@ -69,14 +69,19 @@ class Outer{
 			int x = 6;
 			// 即使x是private的，Inner中也能访问到，因为Inner在Outer类中
 			System.out.println("inner : " +  x); // 6
-			// System.out.println("inner : " +  this.x); // 4
-			// System.out.println("inner:" + Outer.this.x); // 3 
+			// System.out.println("inner : " +  this.x); // 4  ! 无法从静态上下文中引用非静态
+			// System.out.println("inner:" + Outer.this.x); // 3   ! 无法从静态上下文中引用非静态
 			// 外部类成员变量都被外部类对象访问，所以内部类想访问外部类成员变量时，必须有外部类的引用）
 		}
 	}
 
 	class Inner2{
+		int x = 4;
 		void show(){
+			int x = 6;
+			System.out.println("inner2 : " +  x); 
+			System.out.println("inner2 : " +  this.x); 
+			System.out.println("inner2 : " + Outer.this.x); 
 			System.out.println("inner2 show: ");
 		}
 	}
@@ -88,12 +93,16 @@ class Outer{
 
 class ClassNest{
 	public static void main(String[] args){
-		Outer out = new Outer();
-		out.method();
+		// Outer out = new Outer();
+		// out.method();
+
+		// 创建内部类的实例： 外部类.内部类
+		Outer.Inner2 in = new Outer().new Inner2();
+		in.show();
 		
 		// 创建内部静态类的实例： 外部类.内部类
-		// Outer.Inner in = new Outer.Inner();
-		// in.function();
+		Outer.Inner ins = new Outer.Inner();
+		ins.function();
 
 		// 4.在外部其他类中如何直接访问静态内部类中静态成员呢？
 		// 直接访问内部类中的成员：

@@ -35,7 +35,7 @@ class DuoTaiDemo3{
 		Fu f = new Zi();
 		f.method1(); 
 		f.method2(); // fu method2
-		// f.method3(); // Fu类没有 method3方法；编译的时候，编译器只看f所属的对象有么有该方法
+		// f.method3(); // Fu类没有 method3方法；编译的时候，编译器只看f所属的类有么有该方法,所以编译不过
 		/* zi method1；
 		在多态中成员函数（非静态static）的特点：
 		   		在编译时期：参阅引用型变量所属的类中是否有调用的方法。（编译时看Fu类中有么有method1，2）
@@ -53,7 +53,7 @@ class DuoTaiDemo3{
 		System.out.println(z.num); // 8
 		/*
 		在多态中成员变量的特点：
-			多态中的成员变量，无论编译和运行，都参考等号左边（引用型变量所属的类 Zi z = new Zi();）
+			多态中的成员变量，无论编译和运行，都参考等号左边（即引用型变量所属的类 Zi z = new Zi();）
 		*/
 
 		f.method4(); // fu method_4;

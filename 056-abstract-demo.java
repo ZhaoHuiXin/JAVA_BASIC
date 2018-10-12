@@ -14,13 +14,15 @@ class AbstractDemo2{
 		Manager m = new Manager(100000,"jack", "002", 50000);
 		m.work();
 		System.out.println(m.getBonus());
+
+		System.out.println(m.salary);
 	}
 }
 
 abstract class Base{
-	private int salary;
-	private String name;
-	private String id;
+	public int salary;
+	public String name;
+	public String id;
 	Base(int s, String n, String id){
 		this.salary = s;
 		this.name = n;
