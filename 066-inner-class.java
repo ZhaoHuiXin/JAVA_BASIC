@@ -79,9 +79,9 @@ class Outer{
 		int x = 4;
 		void show(){
 			int x = 6;
-			System.out.println("inner2 : " +  x); 
-			System.out.println("inner2 : " +  this.x); 
-			System.out.println("inner2 : " + Outer.this.x); 
+			System.out.println("inner2 : " +  x);
+			System.out.println("inner2 : " +  this.x);
+			System.out.println("inner2 : " + Outer.this.x);
 			System.out.println("inner2 show: ");
 		}
 	}

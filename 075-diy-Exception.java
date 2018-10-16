@@ -22,7 +22,7 @@
 	法获取自定义的异常信息。
 
 	注意：
-		1.必须是自定义类继承Exceptio（Exception 和 Error是Throwable下的两个派系
+		1.必须是自定义类继承Exception（Exception 和 Error是Throwable下的两个派系
 		：异常体系有一个特点：因为异常类和异常对象都需要被抛出，它们都具
 	备可抛出性，这个可抛出性是Throwable这个体系中独有特点，只有这个体系中
 	的类和对象才可以被throw和throws操作
